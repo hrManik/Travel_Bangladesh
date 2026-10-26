@@ -1,0 +1,10 @@
+{
+  "name": "Green Bangladesh — My Travel Map",
+  "description": "An interactive travel tracking map of Bangladesh. Mark visited districts in green, document memories, check statistics, and watch Bangladesh turn green as you travel.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

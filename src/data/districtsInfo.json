@@ -1,0 +1,1639 @@
+[
+  {
+    "id": "bagerhat",
+    "shapeName": "Bagerhat",
+    "name": "Bagerhat",
+    "nameBn": "বাগেরহাট",
+    "division": "Khulna",
+    "divisionBn": "খুলনা",
+    "spots": [
+      "Sixty Dome Mosque (Shat Gombuj Masjid)",
+      "Sundarbans Forest Reserve",
+      "Khan Jahan Ali Shrine",
+      "Mongla Port",
+      "Ghoradighi"
+    ],
+    "highlight": "Home to the UNESCO World Heritage Sixty Dome Mosque and the gateway to the Sundarbans mangrove forest.",
+    "bbox": [
+      89.5309,
+      21.7136,
+      89.9696,
+      22.9834
+    ],
+    "center": [
+      22.1556,
+      89.7109
+    ]
+  },
+  {
+    "id": "bandarban",
+    "shapeName": "Bandarban",
+    "name": "Bandarban",
+    "nameBn": "বান্দরবান",
+    "division": "Chattogram",
+    "divisionBn": "চট্টগ্রাম",
+    "spots": [
+      "Nilgiri",
+      "Sajek Valley Link",
+      "Boga Lake",
+      "Nafakhum Waterfall",
+      "Keokradong Peak",
+      "Golden Temple (Buddha Dhatu Jadi)"
+    ],
+    "highlight": "Highest peaks in Bangladesh, misty hill valleys, and vibrant indigenous cultures.",
+    "bbox": [
+      92.0597,
+      21.1843,
+      92.6803,
+      22.3557
+    ],
+    "center": [
+      21.7102,
+      92.2521
+    ]
+  },
+  {
+    "id": "barguna",
+    "shapeName": "Barguna",
+    "name": "Barguna",
+    "nameBn": "বরগুনা",
+    "division": "Barishal",
+    "divisionBn": "বরিশাল",
+    "spots": [
+      "Shuvo Sandhya Sea Beach",
+      "Haringhata Eco-Forest",
+      "Bibi Chini Mosque",
+      "Pashur Riverbank"
+    ],
+    "highlight": "Serene coastal beaches, river confluences, and mangrove edge eco-parks.",
+    "bbox": [
+      89.8752,
+      21.8604,
+      90.3719,
+      22.4859
+    ],
+    "center": [
+      22.1593,
+      90.1364
+    ]
+  },
+  {
+    "id": "barishal",
+    "shapeName": "Barisal",
+    "name": "Barishal",
+    "nameBn": "বরিশাল",
+    "division": "Barishal",
+    "divisionBn": "বরিশাল",
+    "spots": [
+      "Floating Guava Market (Bhimruli)",
+      "Oxford Mission Church",
+      "Durga Sagar Dighi",
+      "Bell's Park",
+      "Kirtankhola Riverfront"
+    ],
+    "highlight": "The Venice of Bengal, renowned for floating fruit markets and expansive waterways.",
+    "bbox": [
+      90.0179,
+      22.4533,
+      90.6891,
+      23.0721
+    ],
+    "center": [
+      22.8135,
+      90.4358
+    ]
+  },
+  {
+    "id": "bhola",
+    "shapeName": "Bhola",
+    "name": "Bhola",
+    "nameBn": "ভোলা",
+    "division": "Barishal",
+    "divisionBn": "বরিশাল",
+    "spots": [
+      "Monpura Island",
+      "Char Kukri Mukri Wildlife Sanctuary",
+      "Jacob Tower",
+      "Tarua Sea Beach"
+    ],
+    "highlight": "The largest offshore island district of Bangladesh, surrounded by Meghna river and Bay of Bengal.",
+    "bbox": [
+      90.5252,
+      21.8559,
+      91.024,
+      22.8448
+    ],
+    "center": [
+      22.3538,
+      90.7395
+    ]
+  },
+  {
+    "id": "bogura",
+    "shapeName": "Bogra",
+    "name": "Bogura",
+    "nameBn": "বগুড়া",
+    "division": "Rajshahi",
+    "divisionBn": "রাজশাহী",
+    "spots": [
+      "Mahasthangarh (Ancient Citadel)",
+      "Vasudeb Bihar",
+      "Kherua Mosque",
+      "Pundranagar Museum",
+      "Gokul Medh (Behula's Basor Ghar)"
+    ],
+    "highlight": "The archaeological capital of Bangladesh, dating back to 3rd century BCE, and famous for delicious Bogura Doi.",
+    "bbox": [
+      88.9624,
+      24.5363,
+      89.7303,
+      25.1232
+    ],
+    "center": [
+      24.7959,
+      89.2852
+    ]
+  },
+  {
+    "id": "brahmanbaria",
+    "shapeName": "Brahamanbaria",
+    "name": "Brahmanbaria",
+    "nameBn": "ব্রাহ্মণবাড়িয়া",
+    "division": "Chattogram",
+    "divisionBn": "চট্টগ্রাম",
+    "spots": [
+      "Kalbhairab Temple",
+      "Arifil Mosque",
+      "Kharampur Mazar Sharif",
+      "Titas Riverbanks",
+      "Ulchapara Mosque"
+    ],
+    "highlight": "Cultural cradle of Bangladesh, famed for classical music heritage, Titas Gas field, and Chanar Mukhi sweet.",
+    "bbox": [
+      90.7218,
+      23.6467,
+      91.3289,
+      24.268
+    ],
+    "center": [
+      23.9271,
+      91.1258
+    ]
+  },
+  {
+    "id": "chandpur",
+    "shapeName": "Chandpur",
+    "name": "Chandpur",
+    "nameBn": "চাঁদপুর",
+    "division": "Chattogram",
+    "divisionBn": "চট্টগ্রাম",
+    "spots": [
+      "Mollah Head (Tri-river Confluence of Padma, Meghna, Dakatia)",
+      "Rupsa Zamindar Bari",
+      "Hilsa Fish Pier"
+    ],
+    "highlight": "Celebrated as the City of Hilsa fish, located at the scenic confluence of the mighty Meghna and Padma rivers.",
+    "bbox": [
+      90.5387,
+      22.9844,
+      91.03,
+      23.5037
+    ],
+    "center": [
+      23.2324,
+      90.7135
+    ]
+  },
+  {
+    "id": "chapainawabganj",
+    "shapeName": "Nawabganj",
+    "name": "Chapainawabganj",
+    "nameBn": "চাঁপাইনবাবগঞ্জ",
+    "division": "Rajshahi",
+    "divisionBn": "রাজশাহী",
+    "spots": [
+      "Choto Sona Mosque (Small Golden Mosque)",
+      "Darashbari Mosque & Madrasa Ruins",
+      "Tohakhana Complex",
+      "Mahananda Riverbanks",
+      "Mango Capital Orchards"
+    ],
+    "highlight": "The undisputed Mango Capital of Bangladesh, boasting Sultanate architecture at Gaur and Nakshi Kantha crafts.",
+    "bbox": [
+      88.0086,
+      24.4164,
+      88.5117,
+      24.9661
+    ],
+    "center": [
+      24.7929,
+      88.3412
+    ]
+  },
+  {
+    "id": "chattogram",
+    "shapeName": "Chittagong",
+    "name": "Chattogram",
+    "nameBn": "চট্টগ্রাম",
+    "division": "Chattogram",
+    "divisionBn": "চট্টগ্রাম",
+    "spots": [
+      "Patenga Sea Beach",
+      "Foy's Lake",
+      "Naval Beach",
+      "Chandranath Hill & Temple (Sitakunda)",
+      "Guliakhali Beach",
+      "Karnafuli River"
+    ],
+    "highlight": "The commercial capital with sea port, hills, ancient shrines, and the legendary Sitakunda range.",
+    "bbox": [
+      91.3111,
+      21.858,
+      92.2161,
+      22.9888
+    ],
+    "center": [
+      22.4199,
+      91.8399
+    ]
+  },
+  {
+    "id": "chuadanga",
+    "shapeName": "Chuadanga",
+    "name": "Chuadanga",
+    "nameBn": "চুয়াডাঙ্গা",
+    "division": "Khulna",
+    "divisionBn": "খুলনা",
+    "spots": [
+      "Gholdari Shahi Mosque",
+      "Karpasdanga Christian Mission (Nazrul connection)",
+      "Darshana Carew & Co.",
+      "Mathabhanga River"
+    ],
+    "highlight": "Historically the first temporary capital of independent Bangladesh during 1971 war, famed for sugar and mangoes.",
+    "bbox": [
+      88.6349,
+      23.3628,
+      89.0173,
+      23.8397
+    ],
+    "center": [
+      23.5494,
+      88.8246
+    ]
+  },
+  {
+    "id": "cox-s-bazar",
+    "shapeName": "Cox's Bazar",
+    "name": "Cox's Bazar",
+    "nameBn": "কক্সবাজার",
+    "division": "Chattogram",
+    "divisionBn": "চট্টগ্রাম",
+    "spots": [
+      "Longest Natural Sea Beach (120 km)",
+      "Inani Coral Beach",
+      "Himchari Waterfalls & National Park",
+      "Marine Drive",
+      "Saint Martin's Island",
+      "Moheshkhali Island"
+    ],
+    "highlight": "The tourism jewel of Bangladesh featuring the world longest unbroken sandy sea beach and scenic Marine Drive.",
+    "bbox": [
+      91.8294,
+      20.5906,
+      92.3522,
+      21.9241
+    ],
+    "center": [
+      21.5318,
+      92.0699
+    ]
+  },
+  {
+    "id": "cumilla",
+    "shapeName": "Comilla",
+    "name": "Cumilla",
+    "nameBn": "কুমিল্লা",
+    "division": "Chattogram",
+    "divisionBn": "চট্টগ্রাম",
+    "spots": [
+      "Shalban Vihara & Mainamati Ruins",
+      "Dharmasagar Dighi",
+      "Cumilla War Cemetery",
+      "Kotila Mura",
+      "Rupban Mura"
+    ],
+    "highlight": "Ancient Buddhist civilization center, renowned for authentic Rasmalai and Khadi textiles.",
+    "bbox": [
+      90.63,
+      23.0482,
+      91.3719,
+      23.7955
+    ],
+    "center": [
+      23.4458,
+      91.0208
+    ]
+  },
+  {
+    "id": "dhaka",
+    "shapeName": "Dhaka",
+    "name": "Dhaka",
+    "nameBn": "ঢাকা",
+    "division": "Dhaka",
+    "divisionBn": "ঢাকা",
+    "spots": [
+      "Lalbagh Fort",
+      "Ahsan Manzil (Pink Palace)",
+      "National Parliament House (Jatiya Sangsad)",
+      "Tara Mosque",
+      "Dhakenshwari Temple",
+      "Old Dhaka Culinary Walk"
+    ],
+    "highlight": "The historic capital of Bangladesh, buzzing with 400 years of Mughal heritage, rickshaw art, and mouthwatering biryani.",
+    "bbox": [
+      90.0046,
+      23.5221,
+      90.5128,
+      24.0443
+    ],
+    "center": [
+      23.8299,
+      90.2123
+    ]
+  },
+  {
+    "id": "dinajpur",
+    "shapeName": "Dinajpur",
+    "name": "Dinajpur",
+    "nameBn": "দিনাজপুর",
+    "division": "Rangpur",
+    "divisionBn": "রংপুর",
+    "spots": [
+      "Kantanagar Temple (Kantaji)",
+      "Ramsagar National Lake",
+      "Dinajpur Rajbari",
+      "Shopnopuri Amusement Park",
+      "Nayabad Mosque"
+    ],
+    "highlight": "Home to the terracotta marvel Kantajew Temple, the vast historic Ramsagar Dighi, and prized aromatic Katari Bhog rice.",
+    "bbox": [
+      88.3827,
+      25.2223,
+      89.3037,
+      26.0629
+    ],
+    "center": [
+      25.5824,
+      88.842
+    ]
+  },
+  {
+    "id": "faridpur",
+    "shapeName": "Faridpur",
+    "name": "Faridpur",
+    "nameBn": "ফরিদপুর",
+    "division": "Dhaka",
+    "divisionBn": "ঢাকা",
+    "spots": [
+      "Poet Jasimuddin's House",
+      "Fatehabad Mint Ruins",
+      "Kanaipur Zamindar Bari",
+      "Padma River Char Areas",
+      "River Research Institute"
+    ],
+    "highlight": "Land of Polli Kobi Jasimuddin, historic jute trade, and sweet date palm molasses (Patali Gur).",
+    "bbox": [
+      89.4897,
+      23.2104,
+      90.182,
+      23.722
+    ],
+    "center": [
+      23.456,
+      89.8017
+    ]
+  },
+  {
+    "id": "feni",
+    "shapeName": "Feni",
+    "name": "Feni",
+    "nameBn": "ফেনী",
+    "division": "Chattogram",
+    "divisionBn": "চট্টগ্রাম",
+    "spots": [
+      "Muhuri Irrigation Project & Dam",
+      "Bijoy Shingha Dighi",
+      "Raja Ji's Dighi",
+      "Shamsher Gazi Fort Ruins"
+    ],
+    "highlight": "Picturesque border district featuring the vast Muhuri project water reservoir and verdant hills.",
+    "bbox": [
+      91.2467,
+      22.7569,
+      91.5771,
+      23.2853
+    ],
+    "center": [
+      22.9813,
+      91.3969
+    ]
+  },
+  {
+    "id": "gaibandha",
+    "shapeName": "Gaibandha",
+    "name": "Gaibandha",
+    "nameBn": "গাইবান্ধা",
+    "division": "Rangpur",
+    "divisionBn": "রংপুর",
+    "spots": [
+      "Balashighat on Brahmaputra",
+      "Bhabaniganj Lake",
+      "Bardhankuti Zamindar Bari",
+      "Naldanga Zamindar Palace"
+    ],
+    "highlight": "Scenic Brahmaputra riverbanks, seasonal char islands, and traditional Rasmanjari dessert.",
+    "bbox": [
+      89.1839,
+      25.0379,
+      89.7563,
+      25.649
+    ],
+    "center": [
+      25.3148,
+      89.4468
+    ]
+  },
+  {
+    "id": "gazipur",
+    "shapeName": "Gazipur",
+    "name": "Gazipur",
+    "nameBn": "গাজীপুর",
+    "division": "Dhaka",
+    "divisionBn": "ঢাকা",
+    "spots": [
+      "Bhawal National Park",
+      "Bangabandhu Safari Park",
+      "Turag Riverfront",
+      "Vaoal Rajbari",
+      "Nuhash Polli (Humayun Ahmed)"
+    ],
+    "highlight": "Dense Shal forest reserves, wildlife safari sanctuaries, and favorite weekend nature retreats.",
+    "bbox": [
+      90.1471,
+      23.8438,
+      90.703,
+      24.3411
+    ],
+    "center": [
+      24.0684,
+      90.405
+    ]
+  },
+  {
+    "id": "gopalganj",
+    "shapeName": "Gopalganj",
+    "name": "Gopalganj",
+    "nameBn": "গোপালগঞ্জ",
+    "division": "Dhaka",
+    "divisionBn": "ঢাকা",
+    "spots": [
+      "Mausoleum of Bangabandhu Sheikh Mujibur Rahman (Tungipara)",
+      "Ulpur Zamindar Bari",
+      "Madhumati River"
+    ],
+    "highlight": "The birthplace and eternal resting place of the Father of the Nation, surrounded by the calm Madhumati river.",
+    "bbox": [
+      89.6726,
+      22.8529,
+      90.1438,
+      23.3604
+    ],
+    "center": [
+      23.1469,
+      89.9155
+    ]
+  },
+  {
+    "id": "habiganj",
+    "shapeName": "Habiganj",
+    "name": "Habiganj",
+    "nameBn": "হবিগঞ্জ",
+    "division": "Sylhet",
+    "divisionBn": "সিলেট",
+    "spots": [
+      "Satchari National Park",
+      "Rema-Kalenga Wildlife Sanctuary",
+      "Bahubal Tea Estates",
+      "Baniachong (Asia's Largest Village)"
+    ],
+    "highlight": "Pristine virgin rainforests, endangered wildlife sanctuaries, and sprawling rolling green tea gardens.",
+    "bbox": [
+      91.15,
+      23.9754,
+      91.6676,
+      24.6953
+    ],
+    "center": [
+      24.343,
+      91.4214
+    ]
+  },
+  {
+    "id": "jamalpur",
+    "shapeName": "Jamalpur",
+    "name": "Jamalpur",
+    "nameBn": "জামালপুর",
+    "division": "Mymensingh",
+    "divisionBn": "ময়মনসিংহ",
+    "spots": [
+      "Garo Hills Foothills",
+      "Hazrat Shah Jamal Shrine",
+      "Gandhi Ashram",
+      "Lojjapoti Tree Forest",
+      "Yamuna Riverbanks"
+    ],
+    "highlight": "Renowned for intricate Nakshi Kantha needlework and delicious Milkkandi sweets.",
+    "bbox": [
+      89.6386,
+      24.5667,
+      90.2017,
+      25.4327
+    ],
+    "center": [
+      24.9339,
+      89.8967
+    ]
+  },
+  {
+    "id": "jashore",
+    "shapeName": "Jessore",
+    "name": "Jashore",
+    "nameBn": "যশোর",
+    "division": "Khulna",
+    "divisionBn": "খুলনা",
+    "spots": [
+      "Gadkhali Flower Capital",
+      "Michael Madhusudan Dutt Memorial (Sagardari)",
+      "Benapole Land Port",
+      "Mirzhanagar Hammamkhana"
+    ],
+    "highlight": "The flower capital of Bangladesh at Gadkhali, first district liberated in 1971, and birthplace of poet Madhusudan Dutt.",
+    "bbox": [
+      88.845,
+      22.7953,
+      89.5628,
+      23.3745
+    ],
+    "center": [
+      23.1153,
+      89.1399
+    ]
+  },
+  {
+    "id": "jhalokati",
+    "shapeName": "Jhalokati",
+    "name": "Jhalokati",
+    "nameBn": "ঝালকাঠি",
+    "division": "Barishal",
+    "divisionBn": "বরিশাল",
+    "spots": [
+      "Kirtipasha Zamindar Bari",
+      "Bhimruli Floating Market Junction",
+      "Sugandha Riverfront",
+      "Gabkhan Bridge"
+    ],
+    "highlight": "Famous for lush guava orchards, hog plum (Amra) fields, and intricate river canals.",
+    "bbox": [
+      90.019,
+      22.3369,
+      90.3849,
+      22.7865
+    ],
+    "center": [
+      22.5699,
+      90.1718
+    ]
+  },
+  {
+    "id": "jhenaidah",
+    "shapeName": "Jhenaidah",
+    "name": "Jhenaidah",
+    "nameBn": "ঝিনাইদহ",
+    "division": "Khulna",
+    "divisionBn": "খুলনা",
+    "spots": [
+      "Naldanga Temple Complex",
+      "Miah Bari Mosque",
+      "Dhol Samudra Dighi",
+      "Pagla Kanai Shrine",
+      "Shailkupa Shahi Mosque"
+    ],
+    "highlight": "Rich in 16th century terraced temple architecture, mystic Baul culture, and fertile banana plantations.",
+    "bbox": [
+      88.6962,
+      23.2183,
+      89.3767,
+      23.7716
+    ],
+    "center": [
+      23.4433,
+      89.0273
+    ]
+  },
+  {
+    "id": "joypurhat",
+    "shapeName": "Joypurhat",
+    "name": "Joypurhat",
+    "nameBn": "জয়পুরহাট",
+    "division": "Rajshahi",
+    "divisionBn": "রাজশাহী",
+    "spots": [
+      "Paharpur Buddhist Vihara Border Link",
+      "Hinda-Kasure Kasba Mosque",
+      "Lockma Rajbari",
+      "Achhranga Dighi"
+    ],
+    "highlight": "Smallest district in Rajshahi Division, famous for mineral deposits, sugar mills, and peaceful countryside.",
+    "bbox": [
+      88.9196,
+      24.8489,
+      89.2801,
+      25.2776
+    ],
+    "center": [
+      25.079,
+      89.0796
+    ]
+  },
+  {
+    "id": "khagrachhari",
+    "shapeName": "Khagrachhari",
+    "name": "Khagrachhari",
+    "nameBn": "খাগড়াছড়ি",
+    "division": "Chattogram",
+    "divisionBn": "চট্টগ্রাম",
+    "spots": [
+      "Alutila Mysterious Cave",
+      "Tareng Eco-Park",
+      "Risang Waterfall",
+      "Sajek Valley Gateway",
+      "Hajachhari Waterfall"
+    ],
+    "highlight": "Heart of the Chittagong Hill Tracts featuring the dark natural Alutila stone cave and cascades.",
+    "bbox": [
+      91.7119,
+      22.6876,
+      92.1811,
+      23.7342
+    ],
+    "center": [
+      23.1997,
+      91.8739
+    ]
+  },
+  {
+    "id": "khulna",
+    "shapeName": "Khulna",
+    "name": "Khulna",
+    "nameBn": "খুলনা",
+    "division": "Khulna",
+    "divisionBn": "খুলনা",
+    "spots": [
+      "Sundarbans (Kotka, Hiron Point, Karamjal)",
+      "Rupsha River Bridge",
+      "Shiromoni Historical Battleground",
+      "Khan Jahan Ali Shrine Link"
+    ],
+    "highlight": "Gateway to the UNESCO Sundarbans World Heritage mangrove forest, royal Bengal tigers, and dolphin sanctuaries.",
+    "bbox": [
+      89.2342,
+      21.6963,
+      89.7523,
+      23.0102
+    ],
+    "center": [
+      22.264,
+      89.4297
+    ]
+  },
+  {
+    "id": "kishoreganj",
+    "shapeName": "Kishoreganj",
+    "name": "Kishoreganj",
+    "nameBn": "কিশোরগঞ্জ",
+    "division": "Dhaka",
+    "divisionBn": "ঢাকা",
+    "spots": [
+      "Nikli Haor & Mithamoin All-weather Road",
+      "Isa Khan's Jangalbari Fort",
+      "Chandrabati Shiva Temple",
+      "Historic Solakia Eidgah Ground"
+    ],
+    "highlight": "Spectacular endless monsoon haor waters with panoramic marine roads and the land of first Bengali woman poet Chandrabati.",
+    "bbox": [
+      90.5738,
+      24.0306,
+      91.2558,
+      24.6431
+    ],
+    "center": [
+      24.4282,
+      90.9363
+    ]
+  },
+  {
+    "id": "kurigram",
+    "shapeName": "Kurigram",
+    "name": "Kurigram",
+    "nameBn": "কুড়িগ্রাম",
+    "division": "Rangpur",
+    "divisionBn": "রংপুর",
+    "spots": [
+      "Dharla River Bridge",
+      "Chilmari River Port",
+      "Shahi Mosque of Chandamari",
+      "Bhitargarh Border Char"
+    ],
+    "highlight": "Traversed by 16 meandering rivers including the Brahmaputra and Dharla with unique riverine char lifestyles.",
+    "bbox": [
+      89.4518,
+      25.3727,
+      89.887,
+      26.2383
+    ],
+    "center": [
+      25.9491,
+      89.6423
+    ]
+  },
+  {
+    "id": "kushtia",
+    "shapeName": "Kushtia",
+    "name": "Kushtia",
+    "nameBn": "কুষ্টিয়া",
+    "division": "Khulna",
+    "divisionBn": "খুলনা",
+    "spots": [
+      "Lalon Shah Shrine (Chheuriya)",
+      "Rabindranath Tagore's Shilaidaha Kuthibari",
+      "Hardinge Bridge & Lalon Shah Bridge",
+      "Mir Mosharraf Hossain Memorial"
+    ],
+    "highlight": "The spiritual and literary heartland of Baul Fakir Lalon Shah and Rabindranath Tagore on the banks of Gorai and Padma.",
+    "bbox": [
+      88.693,
+      23.6922,
+      89.3632,
+      24.1939
+    ],
+    "center": [
+      23.8912,
+      89.0304
+    ]
+  },
+  {
+    "id": "lakshmipur",
+    "shapeName": "Lakshmipur",
+    "name": "Lakshmipur",
+    "nameBn": "লক্ষ্মীপুর",
+    "division": "Chattogram",
+    "divisionBn": "চট্টগ্রাম",
+    "spots": [
+      "Dalal Bazar Zamindar Bari",
+      "Khoa Sagor Dighi",
+      "Ramgati Meghna Beach",
+      "Tita Khan Jame Mosque"
+    ],
+    "highlight": "Coastal Meghna river beauty, historic merchant zamindar estates, and mouthwatering coconut sweets.",
+    "bbox": [
+      90.6433,
+      22.497,
+      91.0174,
+      23.1739
+    ],
+    "center": [
+      22.9497,
+      90.85
+    ]
+  },
+  {
+    "id": "lalmonirhat",
+    "shapeName": "Lalmonirhat",
+    "name": "Lalmonirhat",
+    "nameBn": "লালমনিরহাট",
+    "division": "Rangpur",
+    "divisionBn": "রংপুর",
+    "spots": [
+      "Teesta Barrage (Dalia)",
+      "Tin Bigha Corridor & Dahagram",
+      "Harano Masjid (Ancient Lost Mosque)",
+      "Mogholhat Border"
+    ],
+    "highlight": "Engineering marvel of Teesta Barrage, northern tea estates, and historical border enclaves.",
+    "bbox": [
+      88.9039,
+      25.7839,
+      89.5709,
+      26.4603
+    ],
+    "center": [
+      26.1816,
+      89.1626
+    ]
+  },
+  {
+    "id": "madaripur",
+    "shapeName": "Madaripur",
+    "name": "Madaripur",
+    "nameBn": "মাদারীপুর",
+    "division": "Dhaka",
+    "divisionBn": "ঢাকা",
+    "spots": [
+      "Shakuni Lake",
+      "Aulia Dargah of Shah Madar",
+      "Rajar Chowki",
+      "Padma Bridge South Approach"
+    ],
+    "highlight": "Famous for scenic Shakuni Lake waterfront, date molasses, and primary river transit on the Arialkhan.",
+    "bbox": [
+      89.9361,
+      22.9643,
+      90.3545,
+      23.498
+    ],
+    "center": [
+      23.2055,
+      90.1594
+    ]
+  },
+  {
+    "id": "magura",
+    "shapeName": "Magura",
+    "name": "Magura",
+    "nameBn": "মাগুরা",
+    "division": "Khulna",
+    "divisionBn": "খুলনা",
+    "spots": [
+      "Ghorakhali Zamindar Bari",
+      "Siddheshwari Kali Temple",
+      "Khatun Gobinda Mandir",
+      "Nabaganga River"
+    ],
+    "highlight": "Birthplace of famous cricketer Shakib Al Hasan, rich folklore, and peaceful countryside along the Nabaganga.",
+    "bbox": [
+      89.244,
+      23.2572,
+      89.6454,
+      23.6815
+    ],
+    "center": [
+      23.4246,
+      89.4026
+    ]
+  },
+  {
+    "id": "manikganj",
+    "shapeName": "Manikganj",
+    "name": "Manikganj",
+    "nameBn": "মানিকগঞ্জ",
+    "division": "Dhaka",
+    "divisionBn": "ঢাকা",
+    "spots": [
+      "Baliati Palace (Baliati Zamindar Bari)",
+      "Teota Zamindar Palace",
+      "Padma-Jamuna River Confluence at Aricha",
+      "Dhaleshwari River"
+    ],
+    "highlight": "Magnificent 19th-century neoclassical architecture at Baliati Palace and iconic Aricha ferry pier.",
+    "bbox": [
+      89.6839,
+      23.6349,
+      90.2557,
+      24.036
+    ],
+    "center": [
+      23.8807,
+      89.9834
+    ]
+  },
+  {
+    "id": "meherpur",
+    "shapeName": "Meherpur",
+    "name": "Meherpur",
+    "nameBn": "মেহেরপুর",
+    "division": "Khulna",
+    "divisionBn": "খুলনা",
+    "spots": [
+      "Mujibnagar Memorial Complex",
+      "Amjhupi British Indigo Kuthi",
+      "Bhabanandapur Temple",
+      "Bhairab River"
+    ],
+    "highlight": "The historic cradle of Bangladesh independence where the first provisional government took oath in Mujibnagar mango orchard.",
+    "bbox": [
+      88.5558,
+      23.6004,
+      88.8845,
+      23.9762
+    ],
+    "center": [
+      23.7926,
+      88.6799
+    ]
+  },
+  {
+    "id": "moulvibazar",
+    "shapeName": "Maulvibazar",
+    "name": "Moulvibazar",
+    "nameBn": "মৌলভীবাজার",
+    "division": "Sylhet",
+    "divisionBn": "সিলেট",
+    "spots": [
+      "Madhabkunda Waterfall",
+      "Lawachara National Park",
+      "Ham Ham Waterfall",
+      "Sreemangal Tea Gardens (Tea Capital)",
+      "Baikka Beel Wetland Sanctuary"
+    ],
+    "highlight": "The Tea Capital of Bangladesh, evergreen hills, the famous 7-layer tea, and thunderous Madhabkunda falls.",
+    "bbox": [
+      91.6016,
+      24.1366,
+      92.2959,
+      24.8362
+    ],
+    "center": [
+      24.4407,
+      91.924
+    ]
+  },
+  {
+    "id": "munshiganj",
+    "shapeName": "Munshiganj",
+    "name": "Munshiganj",
+    "nameBn": "মুন্সীগঞ্জ",
+    "division": "Dhaka",
+    "divisionBn": "ঢাকা",
+    "spots": [
+      "Idrakpur Fort (Mughal River Fort)",
+      "Atish Dipankar Memorial Complex",
+      "Baba Adam Mosque",
+      "Padma Bridge North Pier",
+      "Sirajdikhan Wood Carving"
+    ],
+    "highlight": "Ancient capital of Bikrampur kingdom, Mughal river fortresses, and world-class sweet potatoes and banana gardens.",
+    "bbox": [
+      90.1583,
+      23.3793,
+      90.7108,
+      23.6739
+    ],
+    "center": [
+      23.5337,
+      90.4514
+    ]
+  },
+  {
+    "id": "mymensingh",
+    "shapeName": "Mymensingh",
+    "name": "Mymensingh",
+    "nameBn": "ময়মনসিংহ",
+    "division": "Mymensingh",
+    "divisionBn": "ময়মনসিংহ",
+    "spots": [
+      "Shashi Lodge (Rajbari)",
+      "Brahmaputra Riverside Park",
+      "Bangladesh Agricultural University Botanical Garden",
+      "Zainul Abedin Sangrahashala (Art Gallery)",
+      "Muktagacha Rajbari & Monda"
+    ],
+    "highlight": "Home of Maimansingha Gitika ballads, legendary Muktagacha Monda sweets, and Maestro Zainul Abedin gallery.",
+    "bbox": [
+      90.0758,
+      24.2465,
+      90.822,
+      25.1985
+    ],
+    "center": [
+      24.7456,
+      90.4722
+    ]
+  },
+  {
+    "id": "naogaon",
+    "shapeName": "Naogaon",
+    "name": "Naogaon",
+    "nameBn": "নওগাঁ",
+    "division": "Rajshahi",
+    "divisionBn": "রাজশাহী",
+    "spots": [
+      "Somapura Mahavihara at Paharpur (UNESCO World Heritage)",
+      "Kushumba Mosque (Black Stone Jewel)",
+      "Dubalhati Zamindar Palace",
+      "Patisar Rabindra Kuthibari",
+      "Alta Dighi National Park"
+    ],
+    "highlight": "Hosts Somapura Mahavihara, one of the greatest Buddhist monastic complexes in Asia, and stone architectural gems.",
+    "bbox": [
+      88.3831,
+      24.5333,
+      89.1508,
+      25.2139
+    ],
+    "center": [
+      24.865,
+      88.7668
+    ]
+  },
+  {
+    "id": "narail",
+    "shapeName": "Narail",
+    "name": "Narail",
+    "nameBn": "নড়াইল",
+    "division": "Khulna",
+    "divisionBn": "খুলনা",
+    "spots": [
+      "SM Sultan Memorial Museum & Shishuswargo",
+      "Chitra River Otters Fishing",
+      "Victoria College",
+      "Niribili Picnic Spot"
+    ],
+    "highlight": "Artistic abode of legendary painter SM Sultan and unique centuries-old fishing tradition using trained smooth-coated otters.",
+    "bbox": [
+      89.3782,
+      22.9413,
+      89.8064,
+      23.3234
+    ],
+    "center": [
+      23.13,
+      89.5701
+    ]
+  },
+  {
+    "id": "narayanganj",
+    "shapeName": "Narayanganj",
+    "name": "Narayanganj",
+    "nameBn": "নারায়ণগঞ্জ",
+    "division": "Dhaka",
+    "divisionBn": "ঢাকা",
+    "spots": [
+      "Panam City (Ghost City of Sonargaon)",
+      "Sonargaon Folk Art & Craft Museum",
+      "Hajiganj & Sonakanda Forts",
+      "Mayadip Island",
+      "Murapara Rajbari"
+    ],
+    "highlight": "The historic golden medieval capital of Bengal at Sonargaon, famous for Jamdani saree weaving and Panam Nagar.",
+    "bbox": [
+      90.429,
+      23.5339,
+      90.7412,
+      23.8969
+    ],
+    "center": [
+      23.7656,
+      90.5798
+    ]
+  },
+  {
+    "id": "narsingdi",
+    "shapeName": "Narsingdi",
+    "name": "Narsingdi",
+    "nameBn": "নরসিংদী",
+    "division": "Dhaka",
+    "divisionBn": "ঢাকা",
+    "spots": [
+      "Wari-Bateshwar Archaeological Site (2,500 years old)",
+      "Dream Holiday Park",
+      "Sonaimuri Tek Hillock",
+      "Ghorashal Power Plant Riverfront"
+    ],
+    "highlight": "Oldest urban civilization site in Bangladesh dating to 6th century BCE, world-famous Amrito Sagar bananas, and textiles.",
+    "bbox": [
+      90.5604,
+      23.7628,
+      90.986,
+      24.2516
+    ],
+    "center": [
+      23.9726,
+      90.7314
+    ]
+  },
+  {
+    "id": "natore",
+    "shapeName": "Natore",
+    "name": "Natore",
+    "nameBn": "নাটোর",
+    "division": "Rajshahi",
+    "divisionBn": "রাজশাহী",
+    "spots": [
+      "Rani Bhabani Rajbari",
+      "Uttara Gonobhaban (Northern Government Residence)",
+      "Chalan Beel Wetland",
+      "Dighapatia Rajbari Palace"
+    ],
+    "highlight": "Royal city of Rani Bhabani, northern presidential palace, and home of the authentic melt-in-mouth Kachagolla sweet.",
+    "bbox": [
+      88.8468,
+      24.0992,
+      89.3415,
+      24.6875
+    ],
+    "center": [
+      24.4294,
+      89.089
+    ]
+  },
+  {
+    "id": "netrokona",
+    "shapeName": "Netrakona",
+    "name": "Netrokona",
+    "nameBn": "নেত্রকোণা",
+    "division": "Mymensingh",
+    "divisionBn": "ময়মনসিংহ",
+    "spots": [
+      "Birishiri Cultural Academy & Ceramic White Clay Hills",
+      "Someshwari River & Susang Durgapur",
+      "Bijoypur Border Lake",
+      "Ranikhong Church"
+    ],
+    "highlight": "Picturesque turquoise crystal lakes, white porcelain hills of Birishiri, and indigenous Garo-Hajong heritage.",
+    "bbox": [
+      90.4927,
+      24.5755,
+      91.242,
+      25.198
+    ],
+    "center": [
+      24.8969,
+      90.8424
+    ]
+  },
+  {
+    "id": "nilphamari",
+    "shapeName": "Nilphamari",
+    "name": "Nilphamari",
+    "nameBn": "নীলফামারী",
+    "division": "Rangpur",
+    "divisionBn": "রংপুর",
+    "spots": [
+      "Nilsagor Dighi (Bird Sanctuary)",
+      "Saidpur Railway Heritage Workshops",
+      "Teesta Canal Link",
+      "Dharmapal Garh Ruins"
+    ],
+    "highlight": "Winter migratory bird haven at Nilsagor and historic British railway colonial workshops in Saidpur.",
+    "bbox": [
+      88.7346,
+      25.7311,
+      89.1418,
+      26.3101
+    ],
+    "center": [
+      25.9982,
+      88.9309
+    ]
+  },
+  {
+    "id": "noakhali",
+    "shapeName": "Noakhali",
+    "name": "Noakhali",
+    "nameBn": "নোয়াখালী",
+    "division": "Chattogram",
+    "divisionBn": "চট্টগ্রাম",
+    "spots": [
+      "Nijhum Dwip National Park (Spotted Deer Island)",
+      "Gandhi Ashram Trust",
+      "Bajra Shahi Mosque",
+      "Musapur Regulator Beach"
+    ],
+    "highlight": "Nijhum Dwip sanctuary teeming with thousands of spotted deer, mangrove islands, and Mahatma Gandhi peace trail.",
+    "bbox": [
+      90.8866,
+      22.0231,
+      91.4241,
+      23.1332
+    ],
+    "center": [
+      22.6702,
+      91.1272
+    ]
+  },
+  {
+    "id": "pabna",
+    "shapeName": "Pabna",
+    "name": "Pabna",
+    "nameBn": "পাবনা",
+    "division": "Rajshahi",
+    "divisionBn": "রাজশাহী",
+    "spots": [
+      "Suchitra Sen's Ancestral Home",
+      "Pabna Mental Hospital Heritage Grounds",
+      "Paksey Hardinge Bridge Viewpoint",
+      "Tarash Rajbari",
+      "Jor Bangla Temple"
+    ],
+    "highlight": "Birthplace of screen legend Suchitra Sen, grand river vistas at Paksey, and terracotta Hindu temples.",
+    "bbox": [
+      88.9971,
+      23.8081,
+      89.7327,
+      24.3539
+    ],
+    "center": [
+      24.1189,
+      89.3771
+    ]
+  },
+  {
+    "id": "panchagarh",
+    "shapeName": "Panchagarh",
+    "name": "Panchagarh",
+    "nameBn": "পঞ্চগড়",
+    "division": "Rangpur",
+    "divisionBn": "রংপুর",
+    "spots": [
+      "Kanchenjunga Mountain Viewpoint (Tetulia)",
+      "Banglabandha Zero Point & Land Port",
+      "Mirzapur Shahi Mosque",
+      "Plain Land Tea Estates",
+      "Rocks Museum"
+    ],
+    "highlight": "Northernmost tip of Bangladesh with stunning direct views of Himalayan peak Mount Kanchenjunga in autumn and flat tea gardens.",
+    "bbox": [
+      88.3214,
+      26.0063,
+      88.7978,
+      26.6345
+    ],
+    "center": [
+      26.313,
+      88.5602
+    ]
+  },
+  {
+    "id": "patuakhali",
+    "shapeName": "Patuakhali",
+    "name": "Patuakhali",
+    "nameBn": "পটুয়াখালী",
+    "division": "Barishal",
+    "divisionBn": "বরিশাল",
+    "spots": [
+      "Kuakata Sea Beach (Daughter of Ocean)",
+      "Lebur Char & Red Crab Sanctuary",
+      "Fatrar Char Mangrove",
+      "Kuakata Buddhist Well & Temple"
+    ],
+    "highlight": "Kuakata - the rare panoramic beach where both sunrise and sunset can be enjoyed over the Bay of Bengal waters.",
+    "bbox": [
+      90.0828,
+      21.7692,
+      90.6625,
+      22.5926
+    ],
+    "center": [
+      22.1079,
+      90.397
+    ]
+  },
+  {
+    "id": "pirojpur",
+    "shapeName": "Pirojpur",
+    "name": "Pirojpur",
+    "nameBn": "পিরোজপুর",
+    "division": "Barishal",
+    "divisionBn": "বরিশাল",
+    "spots": [
+      "Baleshwar Riverfront",
+      "Rayerkathi Zamindar Complex",
+      "Floating Rice & Coconut Market (Atghar Kuriana)",
+      "Kuriana Guava Park"
+    ],
+    "highlight": "The heart of the floating guava and hog plum canal labyrinth, rich in sweet coconuts and scenic backwaters.",
+    "bbox": [
+      89.8579,
+      22.1582,
+      90.1886,
+      22.871
+    ],
+    "center": [
+      22.5499,
+      90.0159
+    ]
+  },
+  {
+    "id": "rajbari",
+    "shapeName": "Rajbari",
+    "name": "Rajbari",
+    "nameBn": "রাজবাড়ী",
+    "division": "Dhaka",
+    "divisionBn": "ঢাকা",
+    "spots": [
+      "Goalanda Ghat & Padma Hilsa",
+      "Kalyan Dighi",
+      "Mir Mosharraf Hossain Smriti Kendra (Padamdi)",
+      "Padma River Chars"
+    ],
+    "highlight": "Historic rail transit hub at Goalanda, world-renowned spicy Goalanda steamed chicken and succulent Padma Hilsa.",
+    "bbox": [
+      89.2982,
+      23.5599,
+      89.8649,
+      23.9107
+    ],
+    "center": [
+      23.6918,
+      89.563
+    ]
+  },
+  {
+    "id": "rajshahi",
+    "shapeName": "Rajshahi",
+    "name": "Rajshahi",
+    "nameBn": "রাজশাহী",
+    "division": "Rajshahi",
+    "divisionBn": "রাজশাহী",
+    "spots": [
+      "Varendra Research Museum (Oldest Museum)",
+      "Padma Garden Promenade (T-Groin)",
+      "Bagha Shahi Mosque (on 50 Taka note)",
+      "Puthia Royal Temple City",
+      "Rajshahi Silk Factory"
+    ],
+    "highlight": "The Clean and Green Silk City of Bangladesh, home to majestic Puthia temples and delectable Fazli and Himsagar mangoes.",
+    "bbox": [
+      88.2917,
+      24.1118,
+      88.9637,
+      24.7186
+    ],
+    "center": [
+      24.4953,
+      88.71
+    ]
+  },
+  {
+    "id": "rangamati",
+    "shapeName": "Rangamati",
+    "name": "Rangamati",
+    "nameBn": "রাঙামাটি",
+    "division": "Chattogram",
+    "divisionBn": "চট্টগ্রাম",
+    "spots": [
+      "Kaptai Lake Boat Cruises",
+      "Hanging Bridge (Jhulanto Shetu)",
+      "Shuvolong Waterfalls",
+      "Rajban Vihara Monastery",
+      "Polwel Nature Park",
+      "Kaptai National Park"
+    ],
+    "highlight": "South Asia's largest artificial lake surrounded by emerald blue waters, misty green peaks, and Chakma royal culture.",
+    "bbox": [
+      91.9257,
+      21.8519,
+      92.6343,
+      23.7403
+    ],
+    "center": [
+      22.8242,
+      92.3427
+    ]
+  },
+  {
+    "id": "rangpur",
+    "shapeName": "Rangpur",
+    "name": "Rangpur",
+    "nameBn": "রংপুর",
+    "division": "Rangpur",
+    "divisionBn": "রংপুর",
+    "spots": [
+      "Tajhat Palace (Tajhat Rajbari)",
+      "Chikli Water Park",
+      "Vinnya Jagat Eco-Park",
+      "Keramatia Mosque",
+      "Begum Rokeya Memorial (Pairaband)"
+    ],
+    "highlight": "Grand neoclassical palace of Tajhat, birthplace of pioneer feminist educator Begum Rokeya, and Haribhanga mangoes.",
+    "bbox": [
+      88.9303,
+      25.2992,
+      89.5359,
+      25.9665
+    ],
+    "center": [
+      25.6114,
+      89.2193
+    ]
+  },
+  {
+    "id": "satkhira",
+    "shapeName": "Satkhira",
+    "name": "Satkhira",
+    "nameBn": "সাতক্ষীরা",
+    "division": "Khulna",
+    "divisionBn": "খুলনা",
+    "spots": [
+      "Sundarbans Western Range (Burigoalini)",
+      "Mandarbari Sea Beach",
+      "Jessoreshwari Kali Temple (Ishwaripur)",
+      "Mozaffar Garden",
+      "Mayer Bari Dighi"
+    ],
+    "highlight": "Pure Sundarbans honey, royal Bengal tiger trails, fresh tiger shrimp enclosures, and ancient Hindu shrines.",
+    "bbox": [
+      88.8953,
+      21.6527,
+      89.3598,
+      22.9468
+    ],
+    "center": [
+      22.1915,
+      89.1632
+    ]
+  },
+  {
+    "id": "shariatpur",
+    "shapeName": "Shariatpur",
+    "name": "Shariatpur",
+    "nameBn": "শরীয়তপুর",
+    "division": "Dhaka",
+    "divisionBn": "ঢাকা",
+    "spots": [
+      "Fatehjangpur Fort",
+      "Burirhat Mosque",
+      "Padma Bridge Eastern Span",
+      "Dhanuka Mansa Temple",
+      "Meghna River Banks"
+    ],
+    "highlight": "Named after anti-colonial reformer Haji Shariatullah, scenic river estuaries connecting Padma and Meghna.",
+    "bbox": [
+      90.2205,
+      23.004,
+      90.6078,
+      23.4516
+    ],
+    "center": [
+      23.2285,
+      90.4327
+    ]
+  },
+  {
+    "id": "sherpur",
+    "shapeName": "Sherpur",
+    "name": "Sherpur",
+    "nameBn": "শেরপুর",
+    "division": "Mymensingh",
+    "divisionBn": "ময়মনসিংহ",
+    "spots": [
+      "Ghazni Vacation Center (Ghazni Abakash)",
+      "Madhutila Eco-Park",
+      "Baro Duari Mosque",
+      "Garo Hills Border Foothills"
+    ],
+    "highlight": "Nestled beneath the picturesque Meghalaya border hills with wild elephant corridors and ethnic Garo villages.",
+    "bbox": [
+      89.8798,
+      24.881,
+      90.3048,
+      25.3038
+    ],
+    "center": [
+      25.0712,
+      90.0882
+    ]
+  },
+  {
+    "id": "sirajganj",
+    "shapeName": "Sirajganj",
+    "name": "Sirajganj",
+    "nameBn": "সিরাজগঞ্জ",
+    "division": "Rajshahi",
+    "divisionBn": "রাজশাহী",
+    "spots": [
+      "Bangabandhu Jamuna Bridge & Eco-Park",
+      "Navaratna Temple (Hatkumrul)",
+      "Rabindra Kuthibari (Shahjadpur)",
+      "Chalan Beel Gateway",
+      "Hardinge Jamuna Embankment"
+    ],
+    "highlight": "Gateway to North Bengal with the monumental Jamuna Bridge, handloom textile capital, and Tagore's Shahjadpur haven.",
+    "bbox": [
+      89.2472,
+      24.0135,
+      89.8249,
+      24.7838
+    ],
+    "center": [
+      24.4226,
+      89.5449
+    ]
+  },
+  {
+    "id": "sunamganj",
+    "shapeName": "Sunamganj",
+    "name": "Sunamganj",
+    "nameBn": "সুনামগঞ্জ",
+    "division": "Sylhet",
+    "divisionBn": "সিলেট",
+    "spots": [
+      "Tanguar Haor (UNESCO Ramsar Wetland)",
+      "Shimul Bagan (Silk Cotton Tree Forest)",
+      "Jadukata River & Barek Tila",
+      "Hason Raja Memorial Palace",
+      "Niladri Lake (Shaheed Siraj Lake)"
+    ],
+    "highlight": "Ethereal wonderland of Tanguar Haor, turquoise Jadukata river, red blooming Shimul garden, and mystic melodies of Hason Raja.",
+    "bbox": [
+      90.9278,
+      24.569,
+      91.735,
+      25.2074
+    ],
+    "center": [
+      24.8965,
+      91.3729
+    ]
+  },
+  {
+    "id": "sylhet",
+    "shapeName": "Sylhet",
+    "name": "Sylhet",
+    "nameBn": "সিলেট",
+    "division": "Sylhet",
+    "divisionBn": "সিলেট",
+    "spots": [
+      "Ratargul Freshwater Swamp Forest",
+      "Jaflong & Zero Point Stone Valley",
+      "Hazrat Shah Jalal & Shah Paran Shrines",
+      "Bichnakandi Water Springs",
+      "Lalakhal Emerald River",
+      "Malnicherra Tea Estate"
+    ],
+    "highlight": "Spiritual sanctuary of Shah Jalal, world-famous freshwater swamp forest at Ratargul, crystal clear waterfalls, and emerald rivers.",
+    "bbox": [
+      91.6316,
+      24.5934,
+      92.4967,
+      25.1871
+    ],
+    "center": [
+      24.9119,
+      91.977
+    ]
+  },
+  {
+    "id": "tangail",
+    "shapeName": "Tangail",
+    "name": "Tangail",
+    "nameBn": "টাঙ্গাইল",
+    "division": "Dhaka",
+    "divisionBn": "ঢাকা",
+    "spots": [
+      "Mohera Zamindar Bari",
+      "201 Dome Mosque (Gopalpur)",
+      "Pakutia Zamindar Palace",
+      "Atia Mosque (on 10 Taka note)",
+      "Madhupur Sal Forest & Pineapples"
+    ],
+    "highlight": "The heritage woven Tangail saree, fragrant Porabari Chamcham sweet, majestic palaces, and 201 Dome Mosque.",
+    "bbox": [
+      89.7341,
+      23.9636,
+      90.3008,
+      24.7879
+    ],
+    "center": [
+      24.3414,
+      89.9904
+    ]
+  },
+  {
+    "id": "thakurgaon",
+    "shapeName": "Thakurgaon",
+    "name": "Thakurgaon",
+    "nameBn": "ঠাকুরগাঁও",
+    "division": "Rangpur",
+    "divisionBn": "রংপুর",
+    "spots": [
+      "Ballia Mosque",
+      "Gorokhnath Temple & Well",
+      "Haripur Zamindar Palace",
+      "Tangon Riverfront",
+      "Shapla Beel"
+    ],
+    "highlight": "Peaceful northern district known for sweet Mango Surjapuri, historic terracotta mosques, and lush grain fields.",
+    "bbox": [
+      88.0858,
+      25.6678,
+      88.6465,
+      26.205
+    ],
+    "center": [
+      25.9699,
+      88.3616
+    ]
+  }
+]
