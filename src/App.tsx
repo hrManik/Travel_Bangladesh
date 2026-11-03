@@ -8,6 +8,7 @@ import { GpsLocationModal } from './components/GpsLocationModal';
 import { PassportShareModal } from './components/PassportShareModal';
 import { BackupModal } from './components/BackupModal';
 import { AboutModal } from './components/AboutModal';
+import { RoutePlannerModal } from './components/RoutePlannerModal';
 import { useTravelData } from './hooks/useTravelData';
 import { DISTRICTS_BY_ID } from './data/districts';
 import { StatusFilter, DivisionName } from './types';
@@ -44,6 +45,7 @@ export default function App() {
   const [isPassportOpen, setIsPassportOpen] = useState(false);
   const [isBackupOpen, setIsBackupOpen] = useState(false);
   const [isAboutOpen, setIsAboutOpen] = useState(false);
+  const [isRoutePlannerOpen, setIsRoutePlannerOpen] = useState(false);
 
   // Mobile view tab toggle ('map' | 'districts')
   const [mobileTab, setMobileTab] = useState<'map' | 'districts'>('map');
@@ -85,6 +87,7 @@ export default function App() {
         onLoadDemo={loadDemo}
         onResetAll={resetAll}
         onOpenAbout={() => setIsAboutOpen(true)}
+        onOpenRoutePlanner={() => setIsRoutePlannerOpen(true)}
       />
 
       {/* Travel Dashboard Summary */}
@@ -266,6 +269,11 @@ export default function App() {
       <AboutModal
         isOpen={isAboutOpen}
         onClose={() => setIsAboutOpen(false)}
+      />
+
+      <RoutePlannerModal
+        isOpen={isRoutePlannerOpen}
+        onClose={() => setIsRoutePlannerOpen(false)}
       />
     </div>
   );

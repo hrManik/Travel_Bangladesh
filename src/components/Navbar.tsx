@@ -8,6 +8,7 @@ import {
   MapPin,
   ChevronDown,
   Info,
+  Route,
 } from 'lucide-react';
 import { TravelStats } from '../types';
 
@@ -19,6 +20,7 @@ interface NavbarProps {
   onLoadDemo: () => void;
   onResetAll: () => void;
   onOpenAbout: () => void;
+  onOpenRoutePlanner: () => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
@@ -29,6 +31,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   onLoadDemo,
   onResetAll,
   onOpenAbout,
+  onOpenRoutePlanner,
 }) => {
   const [showMenu, setShowMenu] = useState(false);
   const [showConfirmReset, setShowConfirmReset] = useState(false);
@@ -82,6 +85,15 @@ export const Navbar: React.FC<NavbarProps> = ({
             >
               <Compass className="w-4 h-4 text-emerald-600" />
               <span className="hidden sm:inline">Detect Location</span>
+            </button>
+
+            <button
+              onClick={onOpenRoutePlanner}
+              className="inline-flex items-center space-x-1.5 px-3 py-1.5 text-xs sm:text-sm font-semibold rounded-lg bg-white text-slate-700 hover:bg-emerald-50 hover:text-emerald-800 border border-slate-200 transition shadow-sm active:scale-95"
+              title="Find driving distance between places in Bangladesh"
+            >
+              <Route className="w-4 h-4 text-emerald-600" />
+              <span className="hidden sm:inline">Driving Route</span>
             </button>
 
             {/* Passport & Share */}

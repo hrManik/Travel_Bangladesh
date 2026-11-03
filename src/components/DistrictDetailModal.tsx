@@ -79,14 +79,12 @@ export const DistrictDetailModal: React.FC<DistrictDetailModalProps> = ({
 
   if (!isOpen || !district) return null;
 
-  const shareUrl = new URL(import.meta.env.BASE_URL, window.location.origin);
-  shareUrl.searchParams.set('district', district.id);
+  const shareUrl = new URL(
+    `${import.meta.env.BASE_URL}share/${district.id}/`,
+    window.location.origin
+  );
   const shareCaption = [
     `🇧🇩 I visited ${district.name} (${district.nameBn}) in ${district.division} Division!`,
-    `📅 Visit date: ${formatDate(visitedDate)}`,
-    favoriteSpots.length > 0
-      ? `📍 Places I explored: ${favoriteSpots.join(', ')}`
-      : '',
     'Tracking my Bangladesh journey with Green Bangladesh.',
   ]
     .filter(Boolean)
@@ -108,18 +106,17 @@ export const DistrictDetailModal: React.FC<DistrictDetailModalProps> = ({
       const imageFile = new File([image], `visited-${district.id}.png`, {
         type: 'image/png',
       });
-
-      if (!navigator.canShare?.({ files: [imageFile] })) {
-        setShareMessage('This browser cannot share image files directly. Download the map image and attach it to your post.');
-        return;
-      }
-
-      await navigator.share({
+      const shareData: ShareData = {
         title: `My visit to ${district.name}`,
         text: shareCaption,
         url: shareUrl.toString(),
-        files: [imageFile],
-      });
+      };
+      if (navigator.canShare?.({ files: [imageFile] })) {
+        shareData.files = [imageFile];
+      } else {
+        setShareMessage('Sharing the district map link. Download the image to attach it to Instagram.');
+      }
+      await navigator.share(shareData);
     } catch (error) {
       if (error instanceof DOMException && error.name === 'AbortError') return;
       setShareMessage('Sharing failed. You can copy the caption and link instead.');
@@ -134,11 +131,34 @@ export const DistrictDetailModal: React.FC<DistrictDetailModalProps> = ({
       link.href = imageUrl;
       link.download = `visited-${district.id}-bangladesh-map.png`;
       link.click();
-      URL.revokeObjectURL(imageUrl);
+      window.setTimeout(() => URL.revokeObjectURL(imageUrl), 60_000);
       setShareMessage('Map image downloaded. Attach it to your Instagram or Facebook post.');
     } catch (error) {
       setShareMessage(
         error instanceof Error ? error.message : 'The district map image could not be created.'
+      );
+    }
+  };
+
+  const handleInstagramShare = async () => {
+    try {
+      const image = await createDistrictShareImage(district);
+      const imageUrl = URL.createObjectURL(image);
+      const link = document.createElement('a');
+      link.href = imageUrl;
+      link.download = `visited-${district.id}-bangladesh-map.png`;
+      link.click();
+      window.setTimeout(() => URL.revokeObjectURL(imageUrl), 60_000);
+
+      try {
+        await navigator.clipboard.writeText(shareText);
+        setShareMessage('Map image downloaded and caption copied. Open Instagram to create your post.');
+      } catch {
+        setShareMessage('Map image downloaded. Copy the caption, then attach the image in Instagram.');
+      }
+    } catch (error) {
+      setShareMessage(
+        error instanceof Error ? error.message : 'The Instagram share image could not be created.'
       );
     }
   };
@@ -497,7 +517,7 @@ export const DistrictDetailModal: React.FC<DistrictDetailModalProps> = ({
                   <h3 className="text-sm font-bold text-slate-900">Share your marked district</h3>
                   <p className="mt-1 text-xs leading-relaxed text-slate-600">
                     Share an image of Bangladesh with {district.name} highlighted in green. Your private notes and photos are not included.
-                    Download the map image for Instagram, or share it directly where supported.
+                    Facebook and WhatsApp links include a share preview image. Download the map image for Instagram.
                   </p>
                 </div>
               </div>
@@ -512,6 +532,14 @@ export const DistrictDetailModal: React.FC<DistrictDetailModalProps> = ({
                     Share marked map
                   </button>
                 )}
+                <button
+                  type="button"
+                  onClick={handleInstagramShare}
+                  className="inline-flex items-center gap-1.5 rounded-lg bg-fuchsia-700 px-3 py-2 text-xs font-bold text-white transition hover:bg-fuchsia-800"
+                >
+                  <Camera className="h-3.5 w-3.5" />
+                  Instagram
+                </button>
                 <button
                   type="button"
                   onClick={handleDownloadShareImage}
