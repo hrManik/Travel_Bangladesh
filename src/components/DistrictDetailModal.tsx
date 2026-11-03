@@ -19,6 +19,7 @@ import {
 } from 'lucide-react';
 import { DistrictInfo, DistrictVisit } from '../types';
 import { formatDate } from '../utils/geoUtils';
+import { createDistrictShareImage } from '../utils/districtShareImage';
 
 interface DistrictDetailModalProps {
   district: DistrictInfo | null;
@@ -103,14 +104,42 @@ export const DistrictDetailModal: React.FC<DistrictDetailModalProps> = ({
 
   const handleNativeShare = async () => {
     try {
+      const image = await createDistrictShareImage(district);
+      const imageFile = new File([image], `visited-${district.id}.png`, {
+        type: 'image/png',
+      });
+
+      if (!navigator.canShare?.({ files: [imageFile] })) {
+        setShareMessage('This browser cannot share image files directly. Download the map image and attach it to your post.');
+        return;
+      }
+
       await navigator.share({
         title: `My visit to ${district.name}`,
         text: shareCaption,
         url: shareUrl.toString(),
+        files: [imageFile],
       });
     } catch (error) {
       if (error instanceof DOMException && error.name === 'AbortError') return;
       setShareMessage('Sharing failed. You can copy the caption and link instead.');
+    }
+  };
+
+  const handleDownloadShareImage = async () => {
+    try {
+      const image = await createDistrictShareImage(district);
+      const imageUrl = URL.createObjectURL(image);
+      const link = document.createElement('a');
+      link.href = imageUrl;
+      link.download = `visited-${district.id}-bangladesh-map.png`;
+      link.click();
+      URL.revokeObjectURL(imageUrl);
+      setShareMessage('Map image downloaded. Attach it to your Instagram or Facebook post.');
+    } catch (error) {
+      setShareMessage(
+        error instanceof Error ? error.message : 'The district map image could not be created.'
+      );
     }
   };
 
@@ -465,10 +494,10 @@ export const DistrictDetailModal: React.FC<DistrictDetailModalProps> = ({
               <div className="flex items-start gap-2">
                 <Share2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-700" />
                 <div>
-                  <h3 className="text-sm font-bold text-slate-900">Share this visit</h3>
+                  <h3 className="text-sm font-bold text-slate-900">Share your marked district</h3>
                   <p className="mt-1 text-xs leading-relaxed text-slate-600">
-                    Share your district and selected attractions. Your private notes and photos are not included.
-                    For Instagram, copy the caption and paste it into your post.
+                    Share an image of Bangladesh with {district.name} highlighted in green. Your private notes and photos are not included.
+                    Download the map image for Instagram, or share it directly where supported.
                   </p>
                 </div>
               </div>
@@ -480,9 +509,17 @@ export const DistrictDetailModal: React.FC<DistrictDetailModalProps> = ({
                     className="inline-flex items-center gap-1.5 rounded-lg bg-emerald-700 px-3 py-2 text-xs font-bold text-white transition hover:bg-emerald-800"
                   >
                     <Share2 className="h-3.5 w-3.5" />
-                    Share
+                    Share marked map
                   </button>
                 )}
+                <button
+                  type="button"
+                  onClick={handleDownloadShareImage}
+                  className="inline-flex items-center gap-1.5 rounded-lg bg-slate-800 px-3 py-2 text-xs font-bold text-white transition hover:bg-slate-900"
+                >
+                  <MapPin className="h-3.5 w-3.5" />
+                  Download map image
+                </button>
                 <a
                   href={`https://wa.me/?text=${encodeURIComponent(shareText)}`}
                   target="_blank"

@@ -55,7 +55,7 @@ Initially, the entire map of Bangladesh is white. As you visit places and mark t
 
 ### 7. Share Individual Visits
 - Share a visited district and selected attractions through the device share sheet, WhatsApp, or Facebook.
-- Copy a ready-to-post caption and district link for Instagram.
+- Download or share a social-ready image of Bangladesh with the visited district highlighted; copy a ready-to-post caption and district link for Instagram.
 - Shared links open the selected district in the app. Private trip notes and locally stored photos are not included.
 
 The app footer displays a current-year copyright notice for Manik.
