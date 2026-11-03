@@ -53,6 +53,13 @@ Initially, the entire map of Bangladesh is white. As you visit places and mark t
 - **Travel Passport Card:** Generate and download a personalized PNG passport certificate card or copy a social media summary.
 - **Sample Demo Mode:** One-click demo trip loader with 14 iconic districts and a reset button.
 
+### 7. Share Individual Visits
+- Share a visited district and selected attractions through the device share sheet, WhatsApp, or Facebook.
+- Copy a ready-to-post caption and district link for Instagram.
+- Shared links open the selected district in the app. Private trip notes and locally stored photos are not included.
+
+The app footer displays a current-year copyright notice for Manik.
+
 ---
 
 ## 🛠️ Technology Stack

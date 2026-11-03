@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { DashboardSummary } from './components/DashboardSummary';
 import { MapViewer } from './components/MapViewer';
@@ -47,6 +47,14 @@ export default function App() {
 
   // Mobile view tab toggle ('map' | 'districts')
   const [mobileTab, setMobileTab] = useState<'map' | 'districts'>('map');
+
+  useEffect(() => {
+    const districtId = new URLSearchParams(window.location.search).get('district');
+    if (districtId && DISTRICTS_BY_ID[districtId]) {
+      setSelectedDistrictId(districtId);
+      setIsDetailOpen(true);
+    }
+  }, []);
 
   const handleSelectDistrict = (id: string) => {
     setSelectedDistrictId(id);
@@ -195,6 +203,8 @@ export default function App() {
             <span className="font-bangla">আমার ভ্রমণ মানচিত্র</span>
             <span>•</span>
             <span>64 Administrative Districts</span>
+            <span>•</span>
+            <span>© {new Date().getFullYear()} Manik. All rights reserved.</span>
           </div>
           <div className="flex items-center space-x-4">
             <button

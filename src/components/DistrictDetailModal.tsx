@@ -13,6 +13,9 @@ import {
   Sparkles,
   Info,
   Clock,
+  Share2,
+  Copy,
+  Check,
 } from 'lucide-react';
 import { DistrictInfo, DistrictVisit } from '../types';
 import { formatDate } from '../utils/geoUtils';
@@ -46,8 +49,6 @@ export const DistrictDetailModal: React.FC<DistrictDetailModalProps> = ({
   onSaveDetails,
   onRemoveRecord,
 }) => {
-  if (!isOpen || !district) return null;
-
   const isVisited = Boolean(visit?.visited);
   const [visitedDate, setVisitedDate] = useState<string>(
     visit?.visitedDate || new Date().toISOString().split('T')[0]
@@ -59,6 +60,7 @@ export const DistrictDetailModal: React.FC<DistrictDetailModalProps> = ({
   );
   const [photos, setPhotos] = useState<string[]>(visit?.photos || []);
   const [saveSuccess, setSaveSuccess] = useState(false);
+  const [shareMessage, setShareMessage] = useState('');
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   // Sync state whenever district changes
@@ -70,8 +72,47 @@ export const DistrictDetailModal: React.FC<DistrictDetailModalProps> = ({
       setFavoriteSpots(visit?.favoriteSpots || []);
       setPhotos(visit?.photos || []);
       setSaveSuccess(false);
+      setShareMessage('');
     }
   }, [district, visit]);
+
+  if (!isOpen || !district) return null;
+
+  const shareUrl = new URL(import.meta.env.BASE_URL, window.location.origin);
+  shareUrl.searchParams.set('district', district.id);
+  const shareCaption = [
+    `🇧🇩 I visited ${district.name} (${district.nameBn}) in ${district.division} Division!`,
+    `📅 Visit date: ${formatDate(visitedDate)}`,
+    favoriteSpots.length > 0
+      ? `📍 Places I explored: ${favoriteSpots.join(', ')}`
+      : '',
+    'Tracking my Bangladesh journey with Green Bangladesh.',
+  ]
+    .filter(Boolean)
+    .join('\n');
+  const shareText = `${shareCaption}\n${shareUrl.toString()}`;
+
+  const handleCopyShareText = async () => {
+    try {
+      await navigator.clipboard.writeText(shareText);
+      setShareMessage('Caption and visit link copied. Paste them into Instagram or any app.');
+    } catch {
+      setShareMessage('Could not copy to clipboard. Please check your browser permissions and try again.');
+    }
+  };
+
+  const handleNativeShare = async () => {
+    try {
+      await navigator.share({
+        title: `My visit to ${district.name}`,
+        text: shareCaption,
+        url: shareUrl.toString(),
+      });
+    } catch (error) {
+      if (error instanceof DOMException && error.name === 'AbortError') return;
+      setShareMessage('Sharing failed. You can copy the caption and link instead.');
+    }
+  };
 
   // Handle photo upload
   const handlePhotoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -418,6 +459,66 @@ export const DistrictDetailModal: React.FC<DistrictDetailModalProps> = ({
               )}
             </div>
           </div>
+
+          {isVisited && (
+            <section className="rounded-xl border border-emerald-200 bg-emerald-50/70 p-4">
+              <div className="flex items-start gap-2">
+                <Share2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-700" />
+                <div>
+                  <h3 className="text-sm font-bold text-slate-900">Share this visit</h3>
+                  <p className="mt-1 text-xs leading-relaxed text-slate-600">
+                    Share your district and selected attractions. Your private notes and photos are not included.
+                    For Instagram, copy the caption and paste it into your post.
+                  </p>
+                </div>
+              </div>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {typeof navigator.share === 'function' && (
+                  <button
+                    type="button"
+                    onClick={handleNativeShare}
+                    className="inline-flex items-center gap-1.5 rounded-lg bg-emerald-700 px-3 py-2 text-xs font-bold text-white transition hover:bg-emerald-800"
+                  >
+                    <Share2 className="h-3.5 w-3.5" />
+                    Share
+                  </button>
+                )}
+                <a
+                  href={`https://wa.me/?text=${encodeURIComponent(shareText)}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 rounded-lg bg-green-600 px-3 py-2 text-xs font-bold text-white transition hover:bg-green-700"
+                >
+                  WhatsApp
+                </a>
+                <a
+                  href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl.toString())}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 rounded-lg bg-blue-700 px-3 py-2 text-xs font-bold text-white transition hover:bg-blue-800"
+                >
+                  Facebook
+                </a>
+                <button
+                  type="button"
+                  onClick={handleCopyShareText}
+                  className="inline-flex items-center gap-1.5 rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs font-bold text-slate-700 transition hover:bg-slate-100"
+                >
+                  {shareMessage.startsWith('Caption and visit link copied') ? (
+                    <Check className="h-3.5 w-3.5" />
+                  ) : (
+                    <Copy className="h-3.5 w-3.5" />
+                  )}
+                  Copy caption
+                </button>
+              </div>
+              {shareMessage && (
+                <p role="status" className="mt-2 text-xs text-slate-600">
+                  {shareMessage}
+                </p>
+              )}
+            </section>
+          )}
         </div>
 
         {/* Modal Footer Actions */}
