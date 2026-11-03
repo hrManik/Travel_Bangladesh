@@ -13,6 +13,25 @@ interface GeocodingResult {
   lon: string;
 }
 
+interface PlaceSearchResult extends GeocodingResult {
+  id: string;
+}
+
+interface PhotonFeature {
+  properties: {
+    osm_type: string;
+    osm_id: number;
+    name?: string;
+    street?: string;
+    city?: string;
+    district?: string;
+    state?: string;
+    country?: string;
+    countrycode?: string;
+  };
+  geometry: { coordinates: [number, number] };
+}
+
 interface RouteResult {
   coordinates: [number, number][];
   distanceKm: number;
@@ -58,6 +77,185 @@ async function geocodePlace(query: string, signal: AbortSignal): Promise<Geocodi
   }
   return results[0];
 }
+
+function formatPlaceName(properties: PhotonFeature['properties']): string {
+  return [
+    properties.name,
+    properties.street && properties.street !== properties.name
+      ? properties.street
+      : undefined,
+    properties.city,
+    properties.district,
+    properties.state,
+    properties.country,
+  ]
+    .filter((part, index, parts): part is string =>
+      Boolean(part) && parts.indexOf(part) === index
+    )
+    .join(', ');
+}
+
+async function suggestPlaces(
+  query: string,
+  signal: AbortSignal
+): Promise<PlaceSearchResult[]> {
+  const url = new URL('https://photon.komoot.io/api/');
+  url.searchParams.set('q', query);
+  url.searchParams.set('limit', '10');
+  url.searchParams.set('lang', 'en');
+  url.searchParams.set('bbox', '87.9,20.4,92.8,26.8');
+
+  const response = await fetch(url, { signal });
+  if (!response.ok) {
+    throw new Error('Place suggestions are temporarily unavailable.');
+  }
+
+  const result = (await response.json()) as { features: PhotonFeature[] };
+  const seen = new Set<string>();
+  return result.features
+    .filter((feature) => feature.properties.countrycode?.toUpperCase() === 'BD')
+    .map((feature) => {
+      const [longitude, latitude] = feature.geometry.coordinates;
+      const displayName = formatPlaceName(feature.properties);
+      return {
+        id: `${feature.properties.osm_type}-${feature.properties.osm_id}-${longitude}-${latitude}`,
+        display_name: displayName,
+        lat: String(latitude),
+        lon: String(longitude),
+      };
+    })
+    .filter((place) => {
+      const key = place.display_name.toLowerCase();
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
+}
+
+interface PlaceSearchInputProps {
+  id: string;
+  label: string;
+  placeholder: string;
+  value: string;
+  onChange: (value: string) => void;
+  onSelect: (place: PlaceSearchResult) => void;
+}
+
+const PlaceSearchInput: React.FC<PlaceSearchInputProps> = ({
+  id,
+  label,
+  placeholder,
+  value,
+  onChange,
+  onSelect,
+}) => {
+  const [suggestions, setSuggestions] = useState<PlaceSearchResult[]>([]);
+  const [isSearching, setIsSearching] = useState(false);
+  const [suggestionError, setSuggestionError] = useState('');
+  const [isFocused, setIsFocused] = useState(false);
+  const requestIdRef = useRef(0);
+
+  useEffect(() => {
+    const query = value.trim();
+    if (query.length < 2) {
+      setSuggestions([]);
+      setSuggestionError('');
+      setIsSearching(false);
+      return;
+    }
+
+    const controller = new AbortController();
+    const requestId = ++requestIdRef.current;
+    const timeout = window.setTimeout(async () => {
+      setIsSearching(true);
+      setSuggestionError('');
+      try {
+        const places = await suggestPlaces(query, controller.signal);
+        if (requestId === requestIdRef.current) setSuggestions(places);
+      } catch (error) {
+        if (error instanceof DOMException && error.name === 'AbortError') return;
+        if (requestId === requestIdRef.current) {
+          setSuggestions([]);
+          setSuggestionError(
+            error instanceof Error ? error.message : 'Could not load place suggestions.'
+          );
+        }
+      } finally {
+        if (requestId === requestIdRef.current) setIsSearching(false);
+      }
+    }, 350);
+
+    return () => {
+      window.clearTimeout(timeout);
+      controller.abort();
+    };
+  }, [value]);
+
+  const showSuggestions = isFocused && value.trim().length >= 2;
+
+  return (
+    <label htmlFor={id} className="relative block text-xs font-bold text-slate-700">
+      {label}
+      <input
+        id={id}
+        required
+        minLength={2}
+        autoComplete="off"
+        role="combobox"
+        aria-autocomplete="list"
+        aria-expanded={showSuggestions && (isSearching || suggestions.length > 0)}
+        aria-controls={`${id}-suggestions`}
+        value={value}
+        onFocus={() => setIsFocused(true)}
+        onBlur={() => window.setTimeout(() => setIsFocused(false), 150)}
+        onChange={(event) => onChange(event.target.value)}
+        placeholder={placeholder}
+        className="mt-1.5 w-full rounded-xl border border-slate-200 px-3 py-2.5 text-sm font-normal text-slate-800 outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100"
+      />
+      {showSuggestions && (isSearching || suggestions.length > 0 || suggestionError) && (
+        <div
+          id={`${id}-suggestions`}
+          role="listbox"
+          className="absolute left-0 right-0 top-full z-[70] mt-1 max-h-60 overflow-y-auto rounded-xl border border-slate-200 bg-white p-1 shadow-xl"
+        >
+          {isSearching && (
+            <p className="px-3 py-2 text-xs font-normal text-slate-500">
+              Searching Bangladesh places…
+            </p>
+          )}
+          {!isSearching && suggestionError && (
+            <p role="status" className="px-3 py-2 text-xs font-normal text-amber-700">
+              {suggestionError}
+            </p>
+          )}
+          {!isSearching && !suggestionError && suggestions.length === 0 && (
+            <p className="px-3 py-2 text-xs font-normal text-slate-500">
+              No matches found. You can still search using the full place name.
+            </p>
+          )}
+          {suggestions.map((place) => (
+            <button
+              key={place.id}
+              type="button"
+              role="option"
+              aria-selected="false"
+              onMouseDown={(event) => event.preventDefault()}
+              onClick={() => {
+                onSelect(place);
+                setSuggestions([]);
+                setIsFocused(false);
+              }}
+              className="flex w-full items-start gap-2 rounded-lg px-3 py-2 text-left text-xs font-normal text-slate-700 hover:bg-emerald-50 hover:text-emerald-900"
+            >
+              <MapPin className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-600" />
+              <span>{place.display_name}</span>
+            </button>
+          ))}
+        </div>
+      )}
+    </label>
+  );
+};
 
 function formatManeuver(
   type: string,
@@ -121,6 +319,8 @@ export const RoutePlannerModal: React.FC<RoutePlannerModalProps> = ({
 }) => {
   const [origin, setOrigin] = useState('');
   const [destination, setDestination] = useState('');
+  const [selectedOrigin, setSelectedOrigin] = useState<PlaceSearchResult | null>(null);
+  const [selectedDestination, setSelectedDestination] = useState<PlaceSearchResult | null>(null);
   const [route, setRoute] = useState<RouteResult | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
@@ -208,8 +408,8 @@ export const RoutePlannerModal: React.FC<RoutePlannerModalProps> = ({
         lastGeocodeRequestAtRef.current = Date.now();
         return geocodePlace(place, controller.signal);
       };
-      const start = await searchPlace(origin.trim());
-      const end = await searchPlace(destination.trim());
+      const start = selectedOrigin || (await searchPlace(origin.trim()));
+      const end = selectedDestination || (await searchPlace(destination.trim()));
       const routeUrl = new URL(
         `https://router.project-osrm.org/route/v1/driving/${start.lon},${start.lat};${end.lon},${end.lat}`
       );
@@ -315,28 +515,34 @@ export const RoutePlannerModal: React.FC<RoutePlannerModalProps> = ({
         <div className="grid min-h-0 flex-1 gap-4 overflow-y-auto p-4 sm:p-5 lg:grid-cols-[320px_1fr]">
           <div className="space-y-4">
             <form onSubmit={handleFindRoute} className="space-y-3">
-              <label className="block text-xs font-bold text-slate-700">
-                Starting place
-                <input
-                  required
-                  minLength={2}
-                  value={origin}
-                  onChange={(event) => setOrigin(event.target.value)}
-                  placeholder="e.g. Dhaka Airport"
-                  className="mt-1.5 w-full rounded-xl border border-slate-200 px-3 py-2.5 text-sm font-normal text-slate-800 outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100"
-                />
-              </label>
-              <label className="block text-xs font-bold text-slate-700">
-                Destination
-                <input
-                  required
-                  minLength={2}
-                  value={destination}
-                  onChange={(event) => setDestination(event.target.value)}
-                  placeholder="e.g. Cox's Bazar Beach"
-                  className="mt-1.5 w-full rounded-xl border border-slate-200 px-3 py-2.5 text-sm font-normal text-slate-800 outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100"
-                />
-              </label>
+              <PlaceSearchInput
+                id="route-origin"
+                label="Starting place"
+                placeholder="e.g. Purana Paltan"
+                value={origin}
+                onChange={(value) => {
+                  setOrigin(value);
+                  setSelectedOrigin(null);
+                }}
+                onSelect={(place) => {
+                  setOrigin(place.display_name);
+                  setSelectedOrigin(place);
+                }}
+              />
+              <PlaceSearchInput
+                id="route-destination"
+                label="Destination"
+                placeholder="e.g. Bailey Road"
+                value={destination}
+                onChange={(value) => {
+                  setDestination(value);
+                  setSelectedDestination(null);
+                }}
+                onSelect={(place) => {
+                  setDestination(place.display_name);
+                  setSelectedDestination(place);
+                }}
+              />
               <button
                 type="submit"
                 disabled={isLoading}
@@ -389,7 +595,8 @@ export const RoutePlannerModal: React.FC<RoutePlannerModalProps> = ({
             )}
 
             <p className="text-[11px] leading-relaxed text-slate-500">
-              Place search by OpenStreetMap Nominatim. Driving routes by the OSRM demo service.
+              Suggestions from Photon/OpenStreetMap. Typed place search by OpenStreetMap Nominatim.
+              Driving routes by the OSRM demo service.
               Map data © OpenStreetMap contributors. These community services may be unavailable
               or have usage limits.
             </p>

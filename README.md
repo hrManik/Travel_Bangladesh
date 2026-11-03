@@ -55,11 +55,12 @@ Initially, the entire map of Bangladesh is white. As you visit places and mark t
 
 ### 7. Share Individual Visits
 - Share a social-ready map image with the visited district highlighted. Facebook and WhatsApp get a link preview; download the image and caption for Instagram.
-- Shared links include a district-specific image preview and a link back to the district on the app. Private trip notes and locally stored photos are not included.
+- Shared links open a separate, read-only district map page with a social preview image. The page links to a fresh app home (not an editable record) and does not include or modify the owner's local travel records, notes, or photos.
+- Personal photos stay in the owner's browser and are not uploaded or visible to people opening a shared map link.
 
 ### 8. Driving Route Planner
 - Search for places in Bangladesh, then view an estimated driving route, road distance, duration, and directions on an in-app map.
-- Place search uses OpenStreetMap Nominatim and driving routes use the community OSRM demo service; availability and routing accuracy are not guaranteed.
+- Live Bangladesh place suggestions use Photon/OpenStreetMap as you type; full typed searches use OpenStreetMap Nominatim, and driving routes use the community OSRM demo service. Availability and routing accuracy are not guaranteed.
 - Provides route guidance, not live traffic, turn-by-turn GPS navigation, or automatic rerouting.
 - Map and place data © OpenStreetMap contributors.
 

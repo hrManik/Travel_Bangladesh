@@ -205,9 +205,7 @@ export function socialSharePages(base: string): Plugin {
         const pageUrl = new URL(pagePath, siteUrl).toString();
         const imageUrl = new URL(imagePath, siteUrl).toString();
         const title = `I visited ${name} (${nameBn}) — Green Bangladesh`;
-        const description = `See ${name}, ${division} Division highlighted as a visited district on the Bangladesh travel map.`;
-        const districtAppUrl = new URL(appUrl);
-        districtAppUrl.searchParams.set('district', id);
+        const description = `A read-only shared map showing ${name}, ${division} Division highlighted in green. This page does not include personal photos, notes, or editable travel records.`;
 
         this.emitFile({
           type: 'asset',
@@ -240,15 +238,19 @@ export function socialSharePages(base: string): Plugin {
       body{margin:0;min-height:100vh;display:grid;place-items:center;background:#0f172a;color:#fff;font:16px system-ui,sans-serif}
       main{width:min(900px,92vw);text-align:center;padding:32px 0}
       img{display:block;width:min(560px,100%);height:auto;margin:24px auto;border-radius:20px}
+      .badge{display:inline-block;margin:0;padding:6px 12px;border:1px solid #34d399;border-radius:999px;color:#a7f3d0;font-size:13px;font-weight:700}
+      .privacy{max-width:680px;margin:20px auto;color:#cbd5e1;font-size:14px;line-height:1.6}
       a{display:inline-block;padding:12px 20px;border-radius:12px;background:#22c55e;color:#052e16;font-weight:700;text-decoration:none}
     </style>
   </head>
   <body>
     <main>
       <h1>${escapeHtml(title)}</h1>
+      <p class="badge">Read-only shared map</p>
       <img src="${escapeHtml(imageUrl)}" alt="Bangladesh map with ${escapeHtml(name)} highlighted in green">
       <p>${escapeHtml(description)}</p>
-      <a href="${escapeHtml(districtAppUrl.toString())}">Open Green Bangladesh travel map</a>
+      <p class="privacy">This shared page only displays the district map and caption. It does not show, store, or let visitors edit the traveler's private photos, notes, or map records.</p>
+      <a href="${escapeHtml(appUrl)}">Explore Green Bangladesh</a>
       <p>© ${new Date().getFullYear()} Manik. All rights reserved.</p>
     </main>
   </body>
